@@ -10,10 +10,12 @@ import {
   MatToolbarModule, MatMenuModule,MatIconModule, MatProgressSpinnerModule
 } from '@angular/material';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { routing } from './app.routing';
 import { RegisterComponent } from './register/register.component';
+
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { RegisterComponent } from './register/register.component';
     MatIconModule,
     MatProgressSpinnerModule,
     FormsModule,
-    routing
+    routing,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

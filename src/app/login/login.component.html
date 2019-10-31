@@ -37,17 +37,22 @@
         <table class="example-full-width" cellspacing="0">
           <tr>
             <td>
-              <mat-form-field class="example-full-width">
-              <input matInput placeholder="Username" [(ngModel)]="username" name="username" required
-              matTooltip="Info about the action"
-              aria-label="Button that displays a tooltip when focused or hovered over">
+              <mat-form-field class="example-full-width" class="tooltip">
+                  <span class="tooltiptext">Enter the name</span>
+              <input matInput placeholder="Username" [(ngModel)]="username" name="username" #userName="ngModel" required>
+              <mat-error *ngIf="userName.hasError('required') && !userName.pristine">Name is required!!</mat-error>
               </mat-form-field>
+
             </td>
           </tr>
           <tr>
-          <td><mat-form-field class="example-full-width">
-            <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
-          </mat-form-field></td>
+          <td >
+            <mat-form-field class="example-full-width" class="tooltip">
+            <input matInput placeholder="Password" [(ngModel)]="password" type="password" name="password" #Password="ngModel" required>
+            <mat-error *ngIf="Password.hasError('required') && !Password.pristine">Password is required!!</mat-error>
+            <span class="tooltiptext">Enter password</span>
+          </mat-form-field>
+        </td>
         </tr>
       </table>
       </form>
