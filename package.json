@@ -21,7 +21,7 @@
     "@angular/platform-browser": "~8.1.2",
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",
-    "chart.js": "^2.9.1",
+    "chart.js": "^2.9.4",
     "hammerjs": "^2.0.8",
     "ngx-validate-tooltip": "^1.0.3",
     "primeng": "^8.1.1",
